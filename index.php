@@ -84,7 +84,7 @@
 	$tablenames=array(
 		#txt name,table name
 		array('allCountries.txt','geo_name'),
-		array('alternateNames.txt','geo_alternateNames'),
+		array('alternateNames.txt','geo_alternateName'),
 		array('admin1CodesASCII.txt','geo_admin1'),
 		array('timeZones.txt','geo_timeZones'),
 		
