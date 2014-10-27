@@ -21,3 +21,5 @@ After downloading the files, the 2 zipped files _allCountries.zip_ and _alternat
 | countryInfo.txt       | geo_country              |
 
 Then all the information is imported from files to their corresponding tables.
+
+Note: Please create the database first and then the database name in the config.php file
