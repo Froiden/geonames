@@ -24,4 +24,4 @@ Filename => database tables name
 
 Then the all the information are imported to their corresponding table
 
-Note:Please create the database first and then write the database name in the config.php file
+Note:Please create the database first and then write the database name in the config.php file.
