@@ -17,8 +17,8 @@
 		if (!file_exists('download')) {
 			$dirMode = 0777;
 			$directory = "download";
-			chmod($directory, $dirMode);
 			mkdir($directory, $dirMode, true);
+			chmod($directory, $dirMode);
 		}
 		$destination = "download/$file";
 
