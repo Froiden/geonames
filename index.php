@@ -14,13 +14,13 @@
 	);
 
 	foreach($download as $file){
-		if (!file_exists('download')) {
+		if (!file_exists(DPATH)) {
 			$dirMode = 0777;
-			$directory = "download";
+			$directory = DPATH;
 			mkdir($directory, $dirMode, true);
 			chmod($directory, $dirMode);
 		}
-		$destination = "download/$file";
+		$destination = DPATH.$file;
 
 		if (file_exists($destination)) {
 		   echo "The file <b>$file</b> already exists in the download Folder<br> ";
@@ -49,10 +49,10 @@
 	$filename=array('allCountries.zip','alternateNames.zip');
 	foreach($filename as $file){
 			$file1 = preg_replace('"\.zip$"', '.txt', $file);
-			if (file_exists("download/$file1")) {
+			if (file_exists(DPATH.$file1)) {
 		  			 echo "The file <b>$file1</b> already exists in the download Folder<br> ";
        		 }else{
-				$res = $zip->open('download/'.$file);
+				$res = $zip->open(DPATH.$file);
 					if ($res === TRUE) {
 			 	 $zip->extractTo($path);
 			 	 $zip->close();
@@ -106,7 +106,7 @@
 
 	foreach($tablenames as $file){
 
-			$query  =   "load data infile '{$path}{$file['0']}' IGNORE INTO TABLE {$file['1']} CHARACTER SET UTF8;";
+			$query  =   "load data infile '".DPATH.$file['0']."' IGNORE INTO TABLE ".$file['1']." CHARACTER SET UTF8;";
 			$statement  = $db->prepare($query);
 			$statement->execute();
 	}
