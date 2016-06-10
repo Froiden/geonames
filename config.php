@@ -9,7 +9,7 @@
 	$GLOBALS["DATABASE"] = "geonames";
 
 	#path of the download folder which is in the geonames folder..Dont forget to end with /
-	$path='/Users/Ajay/htdocs/geonames/download/';
+	define('DPATH', dirname(__FILE__).DIRECTORY_SEPARATOR.'download'.DIRECTORY_SEPARATOR);
 	
 #*****************************************************************************	
 
